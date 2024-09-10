@@ -39,5 +39,5 @@ jobs:
         run: docker-compose -f "docker-compose.yaml" up -d --build
 
       # Github Action Docker Compose! Go! Gaskeun
-      - name: Push to GHCR.IO
+      - name: Push to image registry ghcr.io
         run: docker push ghcr.io/jayameiman/auth-maven:latest
