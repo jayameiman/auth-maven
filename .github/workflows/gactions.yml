@@ -36,9 +36,8 @@ jobs:
 
       # Github Action Docker Compose! Go! Gas Terus
       - name: Docker Compose build
-        run: docker compose -f docker-compose.yaml build
-        #run: docker-compose -f "docker-compose.yaml" up -d --build
+        run: docker-compose -f "docker-compose.yaml" up -d --build
 
       # Github Action Docker Compose! Go! Gaskeun
-      - name: Docker Compose push
-        run: docker-compose -f docker-compose.yaml push
+      - name: Push to ghcr.io
+        run: docker push ghcr.io/jayameiman/auth-maven:latest
